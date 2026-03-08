@@ -615,43 +615,80 @@ footer > p {
     color: #333;                   
 }
 
-
-
-
-/* Responsive Design */
+/* Optimized Mobile Layout */
 @media (max-width: 768px) {
-    .about {
-        flex-direction: column;
-        padding: 40px 20px;
+    /* 1. Reset Spacing */
+    section {
+        margin-top: 80px !important;
+        padding: 40px 20px !important;
     }
 
-    .project-container {
+    /* 2. Navigation Fix - Stacks links neatly */
+    nav {
+        height: auto;
         flex-direction: column;
-        padding: 40px 20px;
+        padding: 20px;
     }
-    .contain {
-        padding: 40px 20px;
-    }
+
     .links {
-        flex-direction: column;
-        gap: 10px;
-        margin-right: 0;
+        padding-right: 0;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 15px;
     }
-    .hero {
-        margin-top: 100px;
-    }
-    .serve {
-        font-size: 28px;
-    }
-    .serve1 {
+
+    .links a {
         font-size: 16px;
     }
-    .contact-info {
+
+    /* 3. Hero Section - Adjusts typing effect size */
+    .hero h1 { font-size: 24px; }
+    .hero h2 { font-size: 32px; }
+    .hero p { font-size: 16px; }
+
+    /* 4. About Section - Stacks image and text */
+    .about {
         flex-direction: column;
-        gap: 20px;
+        gap: 30px;
     }
+
+    .about-image {
+        max-width: 100%;
+        transform: none !important; /* Disables side-slide on mobile */
+    }
+
+    .info-row {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    /* 5. Services & Projects - Grid to Single Column */
+    .every, .every1, .project-container, .contact-info {
+        flex-direction: column !important;
+        align-items: center;
+        gap: 20px;
+        padding: 20px 0 !important;
+    }
+
+    .container, .project-card, .contact-item {
+        width: 100% !important;
+        max-width: 350px;
+    }
+
+    /* 6. Footer - Align items to center */
     .footer-content {
         flex-direction: column;
-        gap: 10px;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .footer-content1 {
+        width: 100%;
+    }
+
+    .footer-content1 ul {
+        padding: 0;
     }
 }
+
