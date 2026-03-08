@@ -705,16 +705,6 @@ footer > p {
   to { width: 12ch; }
 }
 
-/* Ensure the keyframes exist if they aren't already defined */
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
-
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: #C9A84C; }
-}
 
     /* 3. Hero Section - Adjusts typing effect size */
     .hero h1 { font-size: 24px; }
@@ -822,6 +812,7 @@ footer > p {
         padding: 0;
     }
 }
+
 
 
 
