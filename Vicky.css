@@ -694,27 +694,35 @@ footer > p {
         gap: 20px;
         padding: 20px 0 !important;
     }
-    /* 1. Stack the containers vertically */
+    
+    /* 1. Stack the service rows vertically */
     .every, .every1 {
         flex-direction: column !important;
         align-items: center !important;
-        padding: 20px !important;
-        gap: 30px !important;
+        padding: 20px 0 !important;
+        gap: 40px !important;
     }
 
-    /* 2. Make the container boxes responsive */
+    /* 2. Make the service containers responsive */
     .container {
-        width: 90% !important; /* Uses 90% of the screen width */
-        max-width: 350px;      /* Prevents it from getting too large on tablets */
-        margin: 10px auto !important;
-        height: auto !important; /* Allows box to grow with text */
-        padding: 25px !important;
+        width: 90% !important;   /* Uses most of the phone width */
+        max-width: 340px;        /* Keeps it from looking too wide on tablets */
+        height: auto !important; /* Allows box to grow if text wraps */
+        margin: 0 auto !important;
+        padding: 30px 20px !important;
+        transform: none !important; /* Resets desktop 3D tilts for better scrolling */
     }
 
-    /* 3. Adjust the 3D effects for touch */
-    .container:hover {
-        transform: translateY(-10px) !important; /* Simpler movement for mobile */
-        box-shadow: 0 10px 20px rgba(0,0,0,0.4) !important;
+    /* 3. Adjust the icons inside the containers */
+    .container .icon {
+        width: 50px !important;
+        height: 50px !important;
+    }
+
+    /* 4. Smooth 3D tap effect for mobile */
+    .container:active {
+        transform: scale(0.95) !important;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.3) !important;
     }
 }
 
@@ -754,6 +762,7 @@ footer > p {
         padding: 0;
     }
 }
+
 
 
 
