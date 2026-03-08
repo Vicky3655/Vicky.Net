@@ -666,6 +666,34 @@ footer > p {
         font-size: 16px;
     }
 
+
+    .hero h2 {
+        font-size: 24px !important;    /* Smaller font for mobile screens */
+        letter-spacing: 1px !important;
+        white-space: nowrap;           /* Keeps the text on one line for the effect */
+        overflow: hidden;
+        border-right: 3px solid #C9A84C;
+        
+        /* Adjust 'width' to match the number of characters in your text */
+        /* If your text is "Front-end Developer", use 19ch or 20ch */
+        width: 18ch; 
+        
+        /* Faster or adjusted animation for smaller screens */
+        animation: typing 3s steps(20, end), blink-caret 0.75s step-end infinite;
+    }
+}
+
+/* Ensure the keyframes exist if they aren't already defined */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #C9A84C; }
+}
+
     /* 3. Hero Section - Adjusts typing effect size */
     .hero h1 { font-size: 24px; }
     .hero h2 { font-size: 32px; }
@@ -772,6 +800,7 @@ footer > p {
         padding: 0;
     }
 }
+
 
 
 
