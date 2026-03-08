@@ -690,7 +690,6 @@ footer > p {
         white-space: nowrap;           
         overflow: hidden;
         display: inline-block;
-        border-right: 3px solid #C9A84C;
         
         /* '12ch' matches the 12 characters in "Chime Victor" */
         width: 12ch; 
@@ -823,6 +822,7 @@ footer > p {
         padding: 0;
     }
 }
+
 
 
 
