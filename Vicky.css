@@ -706,7 +706,23 @@ footer > p {
         text-align: center;
         gap: 30px;
     }
+.footer-content1 ul, 
+.footer-content1 li {
+    list-style: none;               /* Removes dots/bullets */
+    padding: 0;
+    margin: 12px 0;
+}
 
+.footer-content1 a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.footer-content1 a:hover {
+    color: #C9A84C;                 /* Highlights gold on hover */
+}
     .footer-content1 {
         width: 100%;
     }
@@ -715,5 +731,6 @@ footer > p {
         padding: 0;
     }
 }
+
 
 
