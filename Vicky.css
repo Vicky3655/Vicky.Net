@@ -695,34 +695,44 @@ footer > p {
         padding: 20px 0 !important;
     }
     
-    /* 1. Stack the service rows vertically */
+    
+    /* 1. Stack the rows and remove desktop padding */
+    .contain {
+        padding: 20px !important;
+    }
+
     .every, .every1 {
         flex-direction: column !important;
+        gap: 25px !important;
         align-items: center !important;
-        padding: 20px 0 !important;
-        gap: 40px !important;
     }
 
-    /* 2. Make the service containers responsive */
+    /* 2. Fix the "Skinny" box issue */
     .container {
-        width: 90% !important;   /* Uses most of the phone width */
-        max-width: 340px;        /* Keeps it from looking too wide on tablets */
-        height: auto !important; /* Allows box to grow if text wraps */
-        margin: 0 auto !important;
+        width: 100% !important;      /* Use full available width */
+        max-width: 330px;            /* Prevents it from getting too wide */
+        min-height: auto !important; /* Let the box height adjust to the text */
         padding: 30px 20px !important;
-        transform: none !important; /* Resets desktop 3D tilts for better scrolling */
+        margin: 0 auto !important;
+        box-sizing: border-box;      /* Ensures padding doesn't break width */
     }
 
-    /* 3. Adjust the icons inside the containers */
-    .container .icon {
-        width: 50px !important;
-        height: 50px !important;
+    /* 3. Adjust text for readability */
+    .container h2 {
+        font-size: 22px !important;
+        margin: 10px 0 !important;
     }
 
-    /* 4. Smooth 3D tap effect for mobile */
-    .container:active {
-        transform: scale(0.95) !important;
-        box-shadow: 0 5px 10px rgba(0,0,0,0.3) !important;
+    .container p {
+        font-size: 15px !important;
+        line-height: 1.5 !important;
+        padding: 0 10px !important;
+    }
+
+    /* 4. Service Section spacing */
+    .services {
+        margin-top: 100px !important; /* Reduced from 300px for mobile */
+        padding: 40px 0 !important;
     }
 }
 
@@ -762,6 +772,7 @@ footer > p {
         padding: 0;
     }
 }
+
 
 
 
