@@ -623,6 +623,30 @@ footer > p {
         padding: 40px 20px !important;
     }
 
+    .logo {
+        gap: 10px;           /* Reduced from 30px for better fit */
+        font-size: 20px;     /* Smaller text to prevent wrapping */
+        justify-content: center;
+        width: 100%;
+    }
+
+    .logo img {
+        height: 50px;        /* Scaled down from 100px for mobile */
+        width: 50px;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+    }
+
+    /* Toning down the 3D tilt for touch screens */
+    .logo:hover {
+        transform: rotateY(10deg) rotateX(5deg) scale(1.05);
+    }
+
+    .logo:hover img {
+        transform: translateZ(15px); /* Half the desktop distance */
+    }
+}
+
+
     /* 2. Navigation Fix - Stacks links neatly */
     nav {
         height: auto;
@@ -691,4 +715,5 @@ footer > p {
         padding: 0;
     }
 }
+
 
