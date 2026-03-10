@@ -605,7 +605,7 @@ footer > p {
 }
 
 /* Optimized Mobile Layout */
-@media screen (max-width: 768px) {
+@media (max-width: 768px) {
     /* 1. Reset Spacing */
     section {
         margin-top: 80px !important;
@@ -809,6 +809,7 @@ footer > p {
         padding: 0;
     }
 }
+
 
 
 
