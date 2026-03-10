@@ -730,8 +730,21 @@ footer > p {
         flex-direction: column !important;
         overflow: hidden !important; 
     }
-    .contact-item{
-        align-items: center
+    .container, 
+    .contact-item, 
+    .project-card {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;    /* Horizontal centering */
+        justify-content: center !important; /* Vertical centering */
+        text-align: center !important;
+    }
+
+    
+    .icon, 
+    .contact-item .icon {
+        margin: 0 auto 15px auto !important; /* Centers and adds bottom spacing */
+        display: block !important;
     }
 
     /* 3. Adjust text for readability */
@@ -791,6 +804,7 @@ footer > p {
         padding: 0;
     }
 }
+
 
 
 
