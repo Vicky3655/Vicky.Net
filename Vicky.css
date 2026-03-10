@@ -666,44 +666,41 @@ footer > p {
         font-size: 16px;
     }
 
-
     .hero h2 {
-        font-size: 24px !important;    /* Smaller font for mobile screens */
-        letter-spacing: 1px !important;
-        white-space: nowrap;  
-        overflow: hidden;
-        border-right: 3px solid #C9A84C;
-        
-        /* Adjust 'width' to match the number of characters in your text */
-        /* If your text is "Front-end Developer", use 19ch or 20ch */
-        width: 12ch; 
-        
-        /* Faster or adjusted animation for smaller screens */
-        animation: typing 3s steps(20, end), blink-caret 0.75s step-end infinite;
+        display: block !important;
+        text-align: center !important;
+        margin: 0 auto !important;
     }
-
 
     .hero h2::after {
-        content: "Chime Victor"; /* Updates the text content */
-        font-size: 24px !important;    
-        color: #C9A84C;                /* Matches your gold theme */
-        white-space: nowrap;           
-        overflow: hidden;
-        display: inline-block;
-        content: "Chime Victor" !important;
-        width: 12ch !important;    /* Matches "Chime Victor" */
-        animation: typing-mob 3s steps(12) infinite !important;
-    }
-
-    @keyframes typing-mob {
-        0%, 10% { width: 0; }
-        50%, 90% { width: 12ch; }
-    }
     
+        content: "Chime Victor" !important;
+        font-size: 24px !important; 
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        display: inline-block !important;
+        
+        /* '12ch' matches the 12 characters in "Chime Victor" */
+        width: 12ch !important; 
+        border-right: 3px solid #C9A84C !important;
+        
+        /* Uses a unique mobile animation name to avoid desktop conflicts */
+        animation: typing-mobile 3s steps(12) infinite !important, 
+                   blink-caret 0.75s step-end infinite !important;
+    }
+
+    /* Keyframes specifically scaled for 12 characters */
+    @keyframes typing-mobile {
+        0%, 10% { width: 0; }
+        50%, 80% { width: 12ch; }
+        90%, 100% { width: 0; }
+    }
 
 
-@keyframes blink {
-    50% { border-color: transparent; }
+/* Shared cursor blink animation */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #C9A84C; }
 }
     /* 3. Hero Section - Adjusts typing effect size */
     .hero h1 { font-size: 24px; }
@@ -811,6 +808,7 @@ footer > p {
         padding: 0;
     }
 }
+
 
 
 
