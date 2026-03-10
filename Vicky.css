@@ -728,7 +728,10 @@ footer > p {
         padding: 30px 15px !important;
         display: flex !important;
         flex-direction: column !important;
-        overflow: hidden !important; /* Ensures content stays inside */
+        overflow: hidden !important; 
+    }
+    .contact-item{
+        align-items: center
     }
 
     /* 3. Adjust text for readability */
@@ -788,6 +791,7 @@ footer > p {
         padding: 0;
     }
 }
+
 
 
 
