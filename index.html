@@ -293,22 +293,7 @@ document.addEventListener("DOMContentLoaded", function() {
     targets.forEach(target => {
         scrollObserver.observe(target);
     });
-});
-    function deviceGatekeeper() {
-        const width = window.innerWidth;
-        const body = document.body;
-
-        if (width <= 768) {
-            body.classList.add('mobile-mode');
-            body.classList.remove('desktop-mode');
-        } else {
-            body.classList.add('desktop-mode');
-            body.classList.remove('mobile-mode');
-        }
-    }
-    // Run on start and whenever you rotate/resize the phone
-    window.addEventListener('load', deviceGatekeeper);
-    window.addEventListener('resize', deviceGatekeeper);
+})
 
 </script>
 </body>
@@ -316,4 +301,5 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
     
+
 
