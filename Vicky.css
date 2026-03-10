@@ -137,32 +137,32 @@ nav {
     font-family: 'Nunito', sans-serif;
 }
 
-.desktop-mode.hero h2::after {
+.hero h2::after {
     content: "Chime Victor Chinagorom"; 
     display: inline-block;
     white-space: nowrap;
     overflow: hidden;
     border-right: 3px solid #C9A84C; 
     animation: 
-        typing-pc 5s steps(25) infinite,
-        cursor-pc 0.8s infinite,
-        words-pc 10s infinite;
+        typing 5s steps(25) infinite,
+        cursor 0.8s infinite,
+        words 10s infinite;
 }
 
 
-@keyframes typing-pc {
+@keyframes typing {
     0%, 100% { width: 0; }      
     40%, 60% { width: 100%; }   
     90% { width: 0; }          
 }
 
 
-@keyframes words-pc {
+@keyframes words {
     0%, 49% { content: "Chime Victor Chinagorom"; }
     50%, 100% { content: "A.K.A Vicky"; }
 }
 
-@keyframes cursor-pc {
+@keyframes cursor {
     0%, 100% { border-color: transparent; }s
     50% { border-color: #C9A84C; }
 }
@@ -634,7 +634,7 @@ footer > p {
         transform: translateZ(15px); /* Half the desktop distance */
     }
     
-.mobile-mode .hero h2::after {
+.hero h2::after {
     content: "Chime Victor" !important;
     width: 12ch !important;
     font-size: 24px !important;
@@ -809,6 +809,7 @@ footer > p {
         padding: 0;
     }
 }
+
 
 
 
