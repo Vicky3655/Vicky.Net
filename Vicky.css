@@ -665,43 +665,27 @@ footer > p {
     .links a {
         font-size: 16px;
     }
-
+    
+    /* 1. Fix Hero Overlap */
     .hero h2 {
+        font-size: 26px !important;
+        margin-bottom: 10px !important;
         display: block !important;
-        text-align: center !important;
-        margin: 0 auto !important;
     }
 
     .hero h2::after {
-    
         content: "Chime Victor" !important;
-        font-size: 24px !important; 
+        width: 12ch !important; /* Matches character count */
+        font-size: 26px !important;
         white-space: nowrap !important;
-        overflow: hidden !important;
-        display: inline-block !important;
-        
-        /* '12ch' matches the 12 characters in "Chime Victor" */
-        width: 12ch !important; 
-        border-right: 3px solid #C9A84C !important;
-        
-        /* Uses a unique mobile animation name to avoid desktop conflicts */
-        animation: typing-mobile 3s steps(12) infinite !important, 
-                   blink-caret 0.75s step-end infinite !important;
+        animation: typing-mob 3s steps(12) infinite !important;
     }
 
-    /* Keyframes specifically scaled for 12 characters */
-    @keyframes typing-mobile {
+    @keyframes typing-mob {
         0%, 10% { width: 0; }
         50%, 80% { width: 12ch; }
-        90%, 100% { width: 0; }
     }
 
-
-/* Shared cursor blink animation */
-@keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: transparent }
-}
     /* 3. Hero Section - Adjusts typing effect size */
     .hero h1 { font-size: 24px; }
     .hero h2 { font-size: 32px; }
@@ -743,14 +727,14 @@ footer > p {
         align-items: center !important;
     }
 
-    /* 2. Fix the "Skinny" box issue */
-    .container {
-        width: 100% !important;      /* Use full available width */
-        max-width: 330px;            /* Prevents it from getting too wide */
-        min-height: auto !important; /* Let the box height adjust to the text */
+    
+
+     .container {
+        width: 90% !important;   /* Makes it wider on phones */
+        max-width: 350px;
+        height: auto !important; /* Allows text to breathe */
         padding: 30px 20px !important;
-        margin: 0 auto !important;
-        box-sizing: border-box;      /* Ensures padding doesn't break width */
+        margin: 15px auto !important;
     }
 
     /* 3. Adjust text for readability */
@@ -778,7 +762,7 @@ footer > p {
     }
 
     /* 6. Footer - Align items to center */
-    .footer-content {
+ .footer-content {
         flex-direction: column;
         text-align: center;
         gap: 30px;
@@ -789,6 +773,7 @@ footer > p {
     padding: 0;
     margin: 12px 0;
 }
+ 
 
 .footer-content1 a {
     text-decoration: none;
@@ -808,6 +793,7 @@ footer > p {
         padding: 0;
     }
 }
+
 
 
 
