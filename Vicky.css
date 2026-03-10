@@ -644,7 +644,7 @@ footer > p {
     .logo:hover img {
         transform: translateZ(15px); /* Half the desktop distance */
     }
-}
+
 
 
     /* 2. Navigation Fix - Stacks links neatly */
@@ -681,7 +681,7 @@ footer > p {
         /* Faster or adjusted animation for smaller screens */
         animation: typing 3s steps(20, end), blink-caret 0.75s step-end infinite;
     }
-}
+
 
     .hero h2::after {
         content: "Chime Victor"; /* Updates the text content */
@@ -697,7 +697,7 @@ footer > p {
         /* Animation specifically for the 12-character width */
         animation: typing-mobile 3s steps(12, end), blink-caret 0.75s step-end infinite;
     }
-}
+
 
 /* Specific keyframes for the mobile width to prevent overflow */
 @keyframes typing-mobile {
@@ -774,7 +774,7 @@ footer > p {
         margin-top: 100px !important; /* Reduced from 300px for mobile */
         padding: 40px 0 !important;
     }
-}
+
 
     .container, .project-card, .contact-item {
         width: 100% !important;
@@ -812,6 +812,7 @@ footer > p {
         padding: 0;
     }
 }
+
 
 
 
