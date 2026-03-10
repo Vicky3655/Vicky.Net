@@ -666,25 +666,6 @@ footer > p {
         font-size: 16px;
     }
     
-    /* 1. Fix Hero Overlap */
-    .hero h2 {
-        font-size: 26px !important;
-        margin-bottom: 10px !important;
-        display: block !important;
-    }
-
-    .hero h2::after {
-        content: "Chime Victor" !important;
-        width: 12ch !important; /* Matches character count */
-        font-size: 26px !important;
-        white-space: nowrap !important;
-        animation: typing-mob 3s steps(12) infinite !important;
-    }
-
-    @keyframes typing-mob {
-        0%, 10% { width: 0; }
-        50%, 80% { width: 12ch; }
-    }
 
     /* 3. Hero Section - Adjusts typing effect size */
     .hero h1 { font-size: 24px; }
@@ -793,6 +774,7 @@ footer > p {
         padding: 0;
     }
 }
+
 
 
 
