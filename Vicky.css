@@ -685,27 +685,26 @@ footer > p {
 
     .hero h2::after {
         content: "Chime Victor"; /* Updates the text content */
-        font-size: 26px !important;    
+        font-size: 24px !important;    
         color: #C9A84C;                /* Matches your gold theme */
         white-space: nowrap;           
         overflow: hidden;
         display: inline-block;
-        
-        /* '12ch' matches the 12 characters in "Chime Victor" */
-        width: 12ch; 
-        
-        /* Animation specifically for the 12-character width */
-        animation: typing-mobile 3s steps(12, end), blink-caret 0.75s step-end infinite;
+        content: "Chime Victor" !important;
+        width: 12ch !important;    /* Matches "Chime Victor" */
+        animation: typing-mob 3s steps(12) infinite !important;
     }
 
+    @keyframes typing-mob {
+        0%, 10% { width: 0; }
+        50%, 90% { width: 12ch; }
+    }
+    
 
-/* Specific keyframes for the mobile width to prevent overflow */
-@keyframes typing-mobile {
-  from { width: 0; }
-  to { width: 12ch; }
+
+@keyframes blink {
+    50% { border-color: transparent; }
 }
-
-
     /* 3. Hero Section - Adjusts typing effect size */
     .hero h1 { font-size: 24px; }
     .hero h2 { font-size: 32px; }
@@ -812,6 +811,7 @@ footer > p {
         padding: 0;
     }
 }
+
 
 
 
