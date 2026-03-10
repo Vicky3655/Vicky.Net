@@ -657,7 +657,7 @@ footer > p {
         gap: 30px !important;
     }
 
-    .mobile-mode.container, .project-card, .contact-item {
+    .container, .project-card, .contact-item {
         width: 90% !important;   /* Makes boxes wider like your screenshot needs */
         max-width: 350px !important;
         margin: 10px auto !important;
@@ -666,23 +666,7 @@ footer > p {
         flex-direction: column;
     }
 
-    /* 3. Adjust Footer spacing */
-    .footer-content {
-        flex-direction: column !important;
-        text-align: center !important;
-        gap: 40px !important;
-    }
-
-    /* 4. Navigation adjustment */
-    .links {
-        gap: 15px !important;
-        padding: 0 !important;
-        justify-content: center !important;
-    }
-
-
-
-    /* 2. Navigation Fix - Stacks links neatly */
+ /* 2. Navigation Fix - Stacks links neatly */
     nav {
         height: auto;
         flex-direction: column;
@@ -809,6 +793,7 @@ footer > p {
         padding: 0;
     }
 }
+
 
 
 
