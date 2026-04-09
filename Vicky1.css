@@ -672,7 +672,6 @@ footer > p {
     }
 
     .links {
-        padding-right: 0;
         gap: 20px;
         flex-wrap: wrap;
         justify-content: center;
