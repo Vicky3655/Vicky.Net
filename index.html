@@ -43,10 +43,15 @@
     </div>
 </div>
 
-
-
 <section class="about" id="about">
-    <div class="about-image"><img src="IMG_7215.jpg" alt="Vicky's Photo"></div>
+    <div class="about-image">
+        <div class="about-slideshow" id="aboutSlideshow">
+            <img src="IMG_7215.jpg" alt="Vicky's Photo" class="slide active"
+                 onerror="this.classList.add('img-error')">
+            <img src="IMG-20251114-WA0087.jpg" alt="Vicky's Photo 2" class="slide"
+                 onerror="this.classList.add('img-error')">
+        </div>
+    </div>
         <div class="about-content">
             <h2>About Me</h2>
             <p>Hello! I'm Vicky, a passionate web developer and designer with expertise in creating responsive and user-friendly websites.<br> I specialize in front-end development using HTML, CSS, and JavaScript.</br></p>
@@ -328,6 +333,32 @@ document.addEventListener("DOMContentLoaded", function() {
     targets.forEach(target => {
         scrollObserver.observe(target);
     });
+     
+    function initAboutSlideshow() {
+        const allSlides = Array.from(document.querySelectorAll('#aboutSlideshow .slide'));
+        if (allSlides.length === 0) return;
+
+        let currentSlide = allSlides.findIndex(s => s.classList.contains('active'));
+        if (currentSlide === -1) currentSlide = 0;
+
+        setInterval(() => {
+            const usable = allSlides.filter(s => !s.classList.contains('img-error'));
+            if (usable.length <= 1) return; // nothing to cycle to
+
+            const cur = allSlides[currentSlide];
+            cur.classList.remove('active');
+
+            let next = currentSlide;
+            for (let i = 0; i < allSlides.length; i++) {
+                next = (next + 1) % allSlides.length;
+                if (!allSlides[next].classList.contains('img-error')) break;
+            }
+            currentSlide = next;
+            allSlides[currentSlide].classList.add('active');
+        }, 10000); // 10000ms = 10 seconds
+    }
+    initAboutSlideshow();
+
 });
 
 </script>
